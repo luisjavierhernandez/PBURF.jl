@@ -17,7 +17,7 @@ To load the code just type
 
 The main function of package is
 
-* `plottingBasinsUnivariateRationalFunctions(coefficientlistnum,coefficientlistden,...)`: This main function takes two lists of complex numbers that correspond to the coefficients of the numerator and denominator of a rational function and returns the list of fixed points of the function, a rectangular plot of the basins of these fixed points  and a color palette with colors associated to the different fixed points.
+* `PBURF.plottingBasinsUnivariateRationalFunctions(coefficientlistnum,coefficientlistden,...)`: This main function takes two lists of complex numbers that correspond to the coefficients of the numerator and denominator of a rational function and returns the list of fixed points of the function, a rectangular plot of the basins of these fixed points  and a color palette with colors associated to the different fixed points.
 
 This function uses the following arguments
 
@@ -46,10 +46,9 @@ This function also uses the following keyword arguments
 
 
 
-#Installation
+# Installation
 
-This software can be instaled  by giving the following command in the julia command line
-(or in some [IJulia](https://github.com/JuliaLang/IJulia.jl) notebook):
+This software can be instaled  by giving the following command in the Pkg> command line
 
 Pkg> add  https://github.com/luisjavierhernandez/PBURF.jl.git
 
