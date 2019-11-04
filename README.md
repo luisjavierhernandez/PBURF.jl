@@ -51,15 +51,11 @@ This function also uses the following keyword arguments
 This software can be instaled  by giving the following command in the julia command line
 (or in some [IJulia](https://github.com/JuliaLang/IJulia.jl) notebook):
 
-> Pkg.clone("https://github.com/luisjavierhernandez/PBURF.jl")
+Pkg> add  https://github.com/luisjavierhernandez/PBURF.jl.git
 
 in this way, all dependencies will be satisfied automatically.
 
-The code will be upgraded every time the Pkg.update() command is used.
 
-Alternatively, you can manually copy the whole directory structure
-to your julia package directory (use Pkg.dir() to locate it),
-and then run Pkg.update() to download the dependencies.
 
 
 You will need to have the Python [Matplotlib](http://matplotlib.org/)
@@ -67,11 +63,3 @@ library installed on your machine in order to use PyPlot.  You can either
 do inline plotting with [IJulia](https://github.com/JuliaLang/IJulia.jl),
 which doesn't require a GUI backend, or use the Qt, wx, or GTK+ backends
 of Matplotlib.
-
-## Dependencies
-
-*Polynomials.jl
-
-*Pyplot.jl
-
-*Colorsjl
