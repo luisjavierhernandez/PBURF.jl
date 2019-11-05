@@ -346,6 +346,50 @@ function plot_matrixpositer_RationalFunction(
     return  fixedpointsmatrixpositer[3],gseed, img
 end
 
+function aux_plottingBasinsUnivariateRationalFunctions(
+    coefficientlistnum::Array{T,1},
+    coefficientlistden::Array{T,1},
+    expresolution::Int=8,
+    iterationmax::Int=25,
+    iterprecision::Int64=3,
+    aproxprecision::Int64=3;
+    colorstrategy::AbstractString="positionplusiteration",
+    model::AbstractString="localrectangle",
+    rectanglesides::Tuple{Float64,Float64,Float64,Float64}=
+        (-1.5,1.5,-1.5,1.5)) where {T<:Number}
+    maxdegree=max(length(coefficientlistnum),length(coefficientlistden))
+    samedegreecoefficientlistnum=zeros(Complex{Float64}, maxdegree)
+    for i in 1:length(coefficientlistnum)
+        samedegreecoefficientlistnum[i]=coefficientlistnum[i]
+    end
+    samedegreecoefficientlistden=zeros(Complex{Float64}, maxdegree)
+    for i in 1:length(coefficientlistden)
+        samedegreecoefficientlistden[i]=coefficientlistden[i]
+    end
+    preexpresolution=expresolution
+    preiterationmax=iterationmax
+    preiterprecision=iterprecision
+    preaproxprecision=aproxprecision
+    premodeldomain=model
+    prerectanglesidesdomain=rectanglesides
+    fixedpointsmatrixpairpositerex=
+    fixedPointListex_matrixpositioninterations_RationalFunction(
+    samedegreecoefficientlistnum,
+    samedegreecoefficientlistden, preexpresolution,preiterationmax,
+    preiterprecision,preaproxprecision,
+     premodeldomain,  prerectanglesidesdomain)
+    fixedpointsmatrixpairpositer3seedimg=
+    plot_matrixpositer_RationalFunction(fixedpointsmatrixpairpositerex,
+                                        iterationmax,
+                                        colorstrategy,
+                                        model,
+                                        rectanglesides)
+    return  fixedpointsmatrixpairpositer3seedimg
+end
+
+aux_result=aux_plottingBasinsUnivariateRationalFunctions(coefficientlistnumcompila,
+    coefficientlistdencompila
+
 function plottingBasinsUnivariateRationalFunctions(
     coefficientlistnum::Array{T,1},
     coefficientlistden::Array{T,1},
