@@ -14,3 +14,8 @@ result=PBURF.plottingBasinsUnivariateRationalFunctions(coefficientlistnumcompila
     coefficientlistdencompila)
 
 gcf()
+
+PBURF.plottingBasinsUnivariateRationalFunctions(coefficientlistnumcompila,
+    coefficientlistdencompila; colorstrategy="iteration")
+
+gcf()
