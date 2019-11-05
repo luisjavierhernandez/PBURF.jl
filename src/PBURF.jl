@@ -388,7 +388,7 @@ function aux_plottingBasinsUnivariateRationalFunctions(
 end
 
 aux_result=aux_plottingBasinsUnivariateRationalFunctions(coefficientlistnumcompila,
-    coefficientlistdencompila
+    coefficientlistdencompila)
 
 function plottingBasinsUnivariateRationalFunctions(
     coefficientlistnum::Array{T,1},
